@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="M logo.png">
+    <title>Informasi Layanan</title>
+    <style>
+        :root {
+            --darkest-blue: #161230;
+            --deep-twilight: #1c1350;
+            --dark-ultramarine: #170089;
+            --lime-cream: #d8fa7b;
+            --chartreuse: #bbff00;
+            --white-smoke: #f5f5f5;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(180deg, var(--darkest-blue) 0%, var(--deep-twilight) 100%);
+            color: var(--white-smoke);
+            margin: 0;
+            min-height: 100vh;
+            padding: 40px 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .detail-wrapper {
+            width: min(100%, 980px);
+            padding: 36px 32px;
+            background: rgba(10, 9, 35, 0.94);
+            border: 1px solid var(--chartreuse);
+            border-radius: 28px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(12px);
+        }
+
+        h1 {
+            color: var(--chartreuse);
+            font-size: 38px;
+            margin: 0 0 14px 0;
+            letter-spacing: 0.02em;
+        }
+
+        h2 {
+            color: var(--chartreuse);
+            margin-top: 28px;
+            margin-bottom: 16px;
+            letter-spacing: 0.01em;
+        }
+
+        .faq-box {
+            background: linear-gradient(180deg, rgba(24, 20, 63, 0.96), rgba(22, 18, 48, 0.96));
+            padding: 24px;
+            border-radius: 22px;
+            margin-bottom: 18px;
+            border-left: 5px solid var(--chartreuse);
+            color: var(--white);
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
+        }
+
+        .faq-box:hover {
+            transform: translateY(-4px);
+            background: linear-gradient(180deg, rgba(37, 27, 104, 0.97), rgba(24, 17, 58, 0.98));
+            box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
+            cursor: default;
+        }
+
+        strong {
+            color: var(--lime-cream);
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0;
+            color: #d9d9e3;
+        }
+
+        section + section {
+            margin-top: 24px;
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding: 28px 14px;
+            }
+
+            .detail-wrapper {
+                padding: 28px 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .faq-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="detail-wrapper">
+    <h1>Informasi Teknis Layanan</h1>
+
+    <section>
+        <h2>Domain & Hosting</h2>
+        <div class="faq-box">
+    <p><strong>Q: Apakah biaya domain sudah termasuk dalam harga paket?</strong></p>
+    <p>Harga yang tertera merupakan biaya jasa pengembangan website profesional. Biaya domain kami pisahkan agar <em>kepemilikan penuh aset tersebut tetap atas nama Anda</em>, sehingga Anda memiliki kendali penuh atas domain website Anda selamanya.</p>
+        </div>
+        <div class="faq-box">
+    <p><strong>Q: Apakah Anda menyediakan layanan hosting dan maintenance website?</strong></p>
+    <p>Ya, kami menyediakan layanan <em>Managed Hosting & Maintenance</em> bulanan bagi Anda yang ingin website selalu <em>up-to-date</em> tanpa perlu pusing urusan teknis. 
+    <br><br>
+    <em>Catatan: Layanan ini bersifat 100% opsional. Jika bisnis Anda bersifat statis dan tidak memerlukan pembaruan elemen secara berkala, Anda tidak perlu mengambil layanan ini.</em></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Waktu Pengerjaan</h2>
+        <div class="faq-box">
+            <p><strong>Q: Berapa lama waktu yang dibutuhkan untuk menyelesaikan website?</strong></p>
+            <p>Proses pengembangan rata-rata membutuhkan <strong>7 hingga 14 hari kerja</strong>. Durasi ini mencakup desain, pengembangan, hingga pengujian agar website siap tampil sempurna.</p>
+        </div>
+        <div class="faq-box">
+            <p><strong>Q: Bagaimana jika ada permintaan revisi?</strong></p>
+            <p>Kami terbuka dengan masukan Anda. Proses revisi dilakukan secara terstruktur agar <strong>tidak menghambat waktu peluncuran</strong> dan tetap sesuai dengan visi bisnis Anda.</p>
+        </div>
+    </section>
+
+<section>
+    <h2>Pengurusan Website</h2>
+    <div class="faq-box">
+        <p><strong>Q: Websitenya apa akan saya yang pegang atau pihak developer?</strong></p>
+        <p>Kami sangat fleksibel. Kami bisa mengelola segala urusan teknis seperti <em>upload</em> dan <em>publishing</em> agar Anda bisa fokus pada bisnis. Namun, jika Anda lebih nyaman mengelola sendiri, kami akan memberikan <strong>file sumber (ZIP)</strong> agar Anda bisa memegang kendali penuh atas file website Anda kapan saja.</p>
+    </div>
+    <div class="faq-box">
+        <p><strong>Q: Apakah saya tetap memiliki akses ke website saya?</strong></p>
+        <p>Tentu. Apapun pilihan pengelolaan Anda, <strong>kepemilikan domain dan hosting tetap 100% atas nama Anda</strong>. Kami menjamin akses penuh bagi Anda sebagai pemilik sah aset tersebut.</p>
+    </div>
+</section>
+  </div>
+</body>
+</html>

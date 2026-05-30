@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="M logo.png">
+  <title>Metode Pembayaran</title>
+  <style>
+    :root {
+      --darkest-blue: #161230;
+      --deep-twilight: #1c1350;
+      --lime-cream: #d8fa7b;
+      --chartreuse: #bbff00;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, var(--darkest-blue) 0%, var(--deep-twilight) 100%);
+      color: var(--white);
+      margin: 0;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .payment-section {
+      width: min(100%, 980px);
+      padding: 40px 32px;
+      text-align: center;
+      background: rgba(10, 9, 35, 0.92);
+      border: 1px solid var(--chartreuse);
+      border-radius: 28px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .payment-section h2 {
+      font-size: 34px;
+      margin-bottom: 14px;
+      color: var(--chartreuse);
+      letter-spacing: 0.02em;
+    }
+
+    .payment-section p {
+      margin: 0 auto 30px auto;
+      max-width: 720px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #d9d9e3;
+    }
+
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      justify-items: center;
+    }
+
+    .payment-card {
+      width: 100%;
+      background: linear-gradient(180deg, rgba(27, 21, 73, 0.94), rgba(22, 18, 48, 0.95));
+      padding: 28px 22px;
+      border-radius: 22px;
+      border-left: 5px solid var(--chartreuse);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    .payment-card:hover {
+      transform: translateY(-8px);
+      background: linear-gradient(180deg, rgba(37, 27, 104, 0.97), rgba(24, 17, 58, 0.98));
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    .payment-card h3 {
+      font-size: 22px;
+      margin-bottom: 18px;
+      color: var(--chartreuse);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .payment-card ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .payment-card ul li {
+      flex: 0 1 100px;
+      width: 100px;
+      min-width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .payment-card ul li img {
+      width: auto;
+      max-width: 100%;
+      max-height: 56px;
+      height: auto;
+      margin-top: 12px;
+      display: block;
+    }
+
+    .btn-wa {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background-color: var(--chartreuse);
+      color: var(--darkest-blue);
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 16px 30px rgba(187, 255, 0, 0.2);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-wa:hover {
+      background-color: var(--lime-cream);
+      transform: scale(1.04);
+    }
+
+    .payment-section em {
+      display: block;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #b9bbcf;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 30px 16px;
+      }
+
+      .payment-section {
+        padding: 32px 22px;
+      }
+
+      .payment-section h2 {
+        font-size: 28px;
+      }
+
+      .payment-card h3 {
+        font-size: 20px;
+      }
+
+      .payment-card ul li img {
+        height: 50px;
+      }
+
+      .btn-wa {
+        width: 100%;
+        padding: 14px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="payment-section">
+    <h2>Metode Pembayaran</h2>
+    <p>Pilih metode pembayaran yang paling nyaman untuk Anda. Jika butuh bantuan, kirim pesan kepada kami melalui WhatsApp.</p>
+    <div class="payment-grid">
+      <div class="payment-card">
+        <h3>Transfer Bank</h3>
+        <ul>
+          <li><img src="pembayaran/bank-mandiri-logo.svg" alt="Mandiri"></li>
+          <li><img src="pembayaran/jenius-logo.svg" alt="Jenius"></li>
+        </ul>
+      </div>
+      <div class="payment-card">
+        <h3>E-Wallet</h3>
+        <ul>
+          <li><img src="pembayaran/dana-logo.svg" alt="Dana"></li>
+          <li><img src="pembayaran/gopay-logo.svg" alt="GoPay"></li>
+          <li><img src="pembayaran/ovo-logo.svg" alt="OVO"></li>
+        </ul>
+      </div>
+    </div>
+    <em>Untuk detail nomor rekening, silakan hubungi kami via WhatsApp.</em>
+    <a href="https://wa.me/628123456789" class="btn-wa" target="_blank">Minta Detail Pembayaran</a>
+  </section>
+</body>
+</html>

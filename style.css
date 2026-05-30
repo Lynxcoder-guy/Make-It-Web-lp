@@ -1,0 +1,627 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1350;
+}
+
+/* =======================================
+   NAVBAR
+   ======================================= */
+
+nav {
+    background-color: #1F1F1F;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 0; 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 1000; 
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #bbff00; /* Border hijau neon untuk menonjolkan navbar */
+}
+nav h1 {
+    color: #101010;
+    background-color: #bbff00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    margin: 0;
+}
+#nav-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto; 
+    list-style: none;
+    margin-right: 100px;
+}
+
+nav #mobile-links {
+    display: none; /* Sembunyikan navbar di layar HP untuk menghindari masalah layout */
+}
+
+#nav-links li a {
+    text-decoration: none;
+    color: #bbff00; /* Hijau neon andalan */
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+#nav-links li a:hover {
+    color: #2483ff; /* Warna biru cerah saat hover untuk efek interaktif */
+    transition: color 0.3s ease-out; /* Efek transisi halus saat hover */
+    text-decoration: underline;;
+}
+
+/* =======================================
+   HOME SECTION 
+   ======================================= */
+#home {
+    padding-top: 200px;
+    padding-bottom: 120px; /* Tambahkan padding bawah agar seimbang */
+    text-align: center;
+    background: linear-gradient(to bottom, #161230, #1c1350); 
+    color: #ffffff; 
+}
+#home h2 {
+    font-size: 36px;
+    color: #bbff00; /* Tetap putih untuk judul agar kontras dengan background */
+    margin-bottom: 20px;
+    text-shadow: #1F1F1F 2px 2px 4px; 
+    font-family: Arial, Helvetica, sans-serif; /* Memberikan kesan modern dan teknis yang sesuai dengan tema web development */
+}
+
+#home p {
+    font-size: 18px;
+    color: #f5f5f5; /* Diubah dari #1F1F1F ke abu-abu gelap agar mata lebih nyaman membaca */
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    line-height: 1.7; /* Memberikan jarak antar baris teks agar tidak rapat */
+}
+
+/* =======================================
+   LAYANAN SECTION (KOTAK GELAP PREMIUM)
+   ======================================= */
+#layanan {
+    text-align: center;
+    background-color:#161230;
+    margin: 40px auto 0 auto; 
+    width: 90%;
+    max-width: 950px;
+    padding: 50px 30px 50px 30px; 
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px -10px;
+    cursor: default; /* Menunjukkan bahwa ini adalah area informasi, bukan interaktif */
+    margin-top: 150px;
+}
+
+#layanan h2 {
+    font-size: 36px;
+    color: #bbff00; /* Disamakan dengan warna link navbar agar konsisten (branding-nya dapet!) */
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#layanan p {
+    font-size: 18px;
+    text-align: center;
+    
+    /* SARAN UTAMA: Menggunakan warna putih pudar/abu-abu terang untuk teks panjang 
+       supaya kontrasnya tinggi dan mata pengunjung tidak perih */
+    color: #e2e8f0; 
+    
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto 10px auto;
+    
+    /* Perbaikan dari 'monospace' ke 'sans-serif' */
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#layanan-kami button {
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* PENTING: Agar teks benar-benar di tengah secara vertikal */
+    padding: 12px 24px;  /* Padding kiri-kanan dibuat lebih besar daripada atas-bawah agar tombol proporsional */
+    
+    /* Tampilan */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;  /* Dibuat sedikit lebih melengkung agar terlihat lebih modern */
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    
+    /* Warna & Efek */
+    background: linear-gradient(135deg, #1f5acf 0%, #1b64bc 40%, #1f5acf 100%); /* Gradien lebih halus dan lebih gelap */
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background 0.3s ease-out;
+}
+
+#layanan-kami button:hover {
+    background: linear-gradient(135deg, #1c66d7, #1a5cb2); /* Hover tetap dalam nada biru tetapi lebih lembut */
+    transform: scale(1.10); /* Sedikit naik saat hover untuk memberikan feedback visual */
+    box-shadow: 
+    0 0 15px rgba(28, 102, 215, 0.6),
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 8px rgba(255, 255, 255, 0.2);
+}
+#layanan-kami {
+    display: flex;             /* Mengaktifkan flexbox */
+    flex-direction: row;       /* Memastikan berbaris menyamping (row) */
+    justify-content: center;   /* Menengahkan tombol di layar */
+    gap: 50px;                 /* Memberi jarak antar tombol */
+    margin-top: 30px;
+}
+
+#layanan h3 {
+    font-size: 25px;
+    color: #000; /* Saya sarankan warna hitam/gelap agar kontras dengan background hijau */
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #bbff00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content; 
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+#informasi-layanan{
+    display: flex;             /* Mengaktifkan flexbox */
+    flex-direction: row;       /* Memastikan berbaris menyamping (row) */
+    justify-content: center;   /* Menengahkan tombol di layar */
+    gap: 50px;                 /* Memberi jarak antar tombol */
+    margin-top: 30px;
+    font-family: 'inter', sans-serif;
+}
+#informasi-layanan ul{
+    text-align: left;
+    color: #e2e8f0; /* Tetap konsisten dengan warna teks lainnya */
+    font-size: 16px;
+    line-height: 1.6;
+    list-style: none;
+    padding: 0;
+    position: relative; /* Penting: Membuat container untuk absolute position ::before */
+    padding-left: 35px; /* Penting: Memberi ruang di kiri agar teks tidak menabrak tanda >> */
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#informasi-layanan ul li {
+    position: relative; /* SEKARANG TIAP BARIS ADALAH TERITORI MASING-MASING */
+    padding-left: 30px; /* Memberi ruang di kiri tiap baris agar teks tidak menabrak tanda >> */
+    margin-bottom: 12px; /* Jarak antar baris list */
+}
+
+#informasi-layanan ul li::before {
+    content: ">>";
+    color: #bbff00;
+    font-size: 20px;
+    
+    /* Mengunci posisi tanda >> di pojok kiri atas */
+    position: absolute; 
+    left: 0;
+    top: 0;
+    
+    display: inline-block;
+    animation: pointer 2s infinite ease-in-out;
+}
+
+#informasi-layanan h4 {
+    font-size: 20px;
+    color: #bbff00; /* Tetap konsisten dengan warna hijau neon */
+    margin-bottom: 15px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#detail-paket {
+    background-color: #1c1350; /* Warna gelap untuk membedakan dari section utama */
+    padding: 30px;
+    border: #bbff00 2px solid; /* Border hijau neon untuk menonjolkan area detail paket */
+    border-radius: 15px;
+
+}
+
+/* =======================================
+   KELEBIHAN SECTION
+   ======================================= */
+#kelebihan {
+    display: block;
+    width: 100%;
+    margin: 100px 0 0 0; 
+    text-align: center;
+    padding: 80px 0;
+    margin-top: 150px;
+    cursor: default; /* Menunjukkan bahwa ini adalah area informasi, bukan interaktif */
+}
+
+#kelebihan h2 {
+    font-size: 36px;
+    color: #bbff00;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#kelebihan p {
+    font-size: 18px;
+    color: #e2e8f0;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto; /* Menjaga paragraf tetap di tengah kotak */
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    line-height: 1.6; /* Tambahan: Biar teks panjangnya tidak terlalu rapat atas-bawah */
+}
+
+#kelebihan-kami ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 0 auto;
+    display: flex;             /* Mengaktifkan flexbox */
+    flex-wrap: wrap;           /* Agar otomatis turun ke bawah jika layar sempit */
+    justify-content: center;   /* Menengahkan kotak-kotak */
+    gap: 20px;                 /* Jarak antar kotak */
+    max-width: 1000px;
+}
+
+#kelebihan-kami ul li {
+    flex: 1 1 300px;           /* Kotak akan memiliki lebar minimal 300px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(135deg, #bbff00, #c0e55c);
+    padding: 20px;
+    border-radius: 10px;
+    color: #1c1350;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 10px rgba(187, 255, 0, 0.2);
+    
+    /* Penting agar tanda ::before bisa diposisikan */
+    position: relative; 
+    min-height: 80px;
+
+    /* Efek hover untuk memberikan feedback visual */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    cursor: default; /* Menunjukkan bahwa ini adalah area informasi, bukan interaktif */
+}
+
+#kelebihan-kami ul li img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* =======================================
+   CONTACT SECTION
+   ======================================= */
+    #contact {
+    background: rgba(22, 18, 48, 0.5); /* Sedikit transparansi agar terlihat elegan */
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin: 200px auto 100px auto; 
+    width: 90%;
+    max-width: 950px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px -10px;
+    cursor: default; /* Menunjukkan bahwa ini adalah area informasi, bukan interaktif */
+
+}
+    #contact h2 {
+        font-size: 36px;
+        color: #bbff00;
+        margin-bottom: 20px;
+        font-family: 'Helvetica', sans-serif;
+    }
+    #contact #deskripsi-kontak {
+        font-size: 18px;
+        color: #e2e8f0;
+        width: 80%;
+        max-width: 900px;
+        margin: 0 auto 20px auto; /* Tambahkan margin bawah agar ada jarak dengan kalimat berikutnya */
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+    }
+    #contact strong {
+        color: #bbff00; /* Tetap konsisten dengan warna hijau neon untuk highlight */
+    }
+    #contact #disclaimer {
+        font-size: 16px;
+        color: #e2e8f0;
+        width: 80%;
+        max-width: 900px;
+        margin: 20px auto 20px auto; /* Tambahkan margin atas agar ada jarak dengan kalimat sebelumnya */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #contact button {
+        display: inline-block;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, rgba(187, 255, 0, 0.98), rgba(216, 250, 123, 0.94));
+        color: #111111;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 14px;
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background 0.3s ease-out;
+    }
+    #contact button:hover {
+        background: linear-gradient(135deg, rgba(216, 250, 123, 1), rgba(187, 255, 0, 0.96));
+        transform: scale(1.03);
+        color: #111111;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24), 0 0 20px rgba(216, 250, 123, 0.35);
+    }
+
+/* =======================================
+   FOOTER
+   ======================================= */
+#footer {
+    background-color: #161230; /* Menyatukan background agar tidak tabrakan */
+    color: #f5f5f5;
+    text-align: left;
+    margin-top: 200px;
+    /* PADDING YANG PROPER (Atas & bawah diberi ruang napas yang seimbang, kiri & kanan disamakan) */
+    padding: 60px 40px; 
+    
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    cursor: default;
+}
+
+#footer h4 {
+    font-size: 20px;          /* Dikecilkan sedikit dari 24px agar lebih elegan */
+    color: #bbff00;           /* Warna neon andalanmu, mantap! */
+    margin: 0 0 16px 0;       /* Mengatur margin bawah dengan rapi */
+    font-weight: 600;
+    text-transform: uppercase; /* Bikin huruf kapital semua biar tegas kayak web modern */
+    letter-spacing: 1px;      /* Memberikan sedikit jarak antar huruf judul */
+}
+
+#list-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;                /* Jarak antar menu sedikit renggang biar enak dibaca */
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+}
+
+#footer ul li a {
+    font-size: 15px;          /* Ukuran teks menu ideal (tidak kebesaran) */
+    color: #a0aec0;           /* Warna abu-abu lembut, jadi fokus mata tetap ke H4 dulu */
+    font-family: 'Trebuchet MS', Arial, sans-serif; /* Font disamakan agar rapi */
+    text-decoration: none;
+    cursor: pointer;          /* DIPERBAIKI: dari 'click' menjadi 'pointer' */
+    transition: color 0.2s ease; /* Efek animasi halus saat nanti di-hover mouse */
+}
+
+/* EFEK HOVER: Biar pas kursor nempel, warnanya berubah jadi putih terang. Klien pasti suka! */
+#footer ul li a:hover {
+    color: #ffffff;
+}
+/* =======================================
+   BACKGROUND CLASS
+   ======================================= */
+.background1 {
+    background: #1c1350;
+    width: 100%;
+    min-height: 10vh;
+}
+
+/* =======================================
+   ANIMATION CLASS
+   ======================================= */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pointer{
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes color-change{
+    0% {
+        color: #bbff00;
+    }
+    50% {
+        color: #f5f5f5;
+    }
+    100% {
+        color: #bbff00;
+    }
+}
+
+/* =======================================
+   SCREEN SIZE MEDIA QUERY
+   600px ke bawah (mobile)
+   ======================================= */
+@media (max-width: 900px) {
+    /* Menghilangkan scroll horizontal pada root website */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    nav {
+        /* PENTING: space-between akan mendorong logo ke kiri dan mobile-links ke kanan */
+        justify-content: space-between; 
+        padding: 10px 15px;
+        width: 100%;
+        box-sizing: border-box; /* Mencegah navbar melebar keluar layar */
+    }
+
+    nav #mobile-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 15px; /* Jarak antar ikon */
+        padding: 0; /* Hapus padding agar tidak terdorong */
+        margin: 0;  /* Hapus margin agar tidak terdorong */
+        align-items: center; /* Menjaga ikon tetap di tengah secara vertikal */
+    }
+
+    nav #nav-links {
+        display: none !important; /* Memastikan desktop menu hilang */
+    }
+
+    nav h1 {
+        font-size: 20px;
+        margin: 0; /* Pastikan tidak ada margin yang mendorong ke kanan */
+    }
+
+    #home {
+        width: 100%; 
+        padding-top: 200px; 
+        padding-bottom: 80px;
+        box-sizing: border-box;
+        
+        /* AKTIFKAN FLEXBOX UNTUK KONTEN UTAMA */
+        display: flex;
+        flex-direction: column;   /* Susun h2 dan p dari atas ke bawah */
+        align-items: center;      /* Paling PENTING: Mengetengahkan h2 dan p secara horizontal */
+        justify-content: center;  /* Mengetengahkan secara vertikal jika ada sisa ruang */
+        text-align: center;
+    }
+
+    #home h2 {
+        font-size: 28px; 
+        width: 85%;     
+        margin: 0 auto 20px auto; /* Tambahkan '0 auto' agar kotak judulnya center */
+    }
+
+    #home p {
+        font-size: 15px;
+        width: 85%;      
+        margin: 0 auto;           /* Tetap menjaga teks berada di tengah */
+    }
+    #layanan {
+        padding: 30px 15px;     /* Sedikit dipersempit padding-nya agar teks di dalam punya ruang luas */
+        width: 95%;             /* Lebar aman agar ada jarak tipis dengan tepi layar HP */
+        box-sizing: border-box; /* WAJIB: Agar padding tidak menambah total lebar elemen */
+    }
+
+    #layanan h2 {
+        font-size: 28px;
+    }
+
+    #layanan p {
+        font-size: 15px;
+        width: 100%;            /* Ubah ke 100% agar teks memanfaatkan ruang kotak secara maksimal */
+    }
+
+    #Harga-layanan{
+        font-size: 10px;
+    }
+    
+    #harga-bro h2 {
+        font-size: 20px;   /* Atur ukuran lebih kecil */
+        color: #bbff00;    /* Tetap konsisten dengan warna neon */
+        margin-top: 15px;  /* Jarak atas biar rapi */
+        text-align: center; /* Biar tetap di tengah */
+    }
+
+    #layanan-kami, #informasi-layanan {
+        flex-direction: column; /* Membuat tombol dan kotak paket bertumpuk vertikal */
+        gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #layanan-kami button:hover {
+    background: linear-gradient(135deg, #1c66d7, #1a5cb2); /* Hover tetap dalam nada biru tetapi lebih lembut */
+    transform: translateY(-3px); /* Sedikit naik saat hover untuk memberikan feedback visual */
+    box-shadow:    0 0 15px rgba(28, 102, 215, 0.6),
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+    /* PERBAIKAN UTAMA: Reset ul agar tidak mendorong layar ke kanan */
+    #informasi-layanan ul {
+        padding-left: 0 !important; /* Memaksa sisa padding desktop hilang total */
+        width: 100%;
+    }
+
+    #informasi-layanan ul li{
+        font-size: 15px;
+    }
+
+    /* Memastikan detail paket pas dengan lebar layar HP */
+    #detail-paket {
+        padding: 20px 15px;     /* Kurangi padding dalam kotak paket di mobile */
+        width: 100%;            /* Mengikuti lebar container utamanya */
+        box-sizing: border-box; /* Mencegah kotak melar keluar akibat border/padding */
+    }
+    #kelebihan {
+    width: 100%;
+    max-width: none;
+    margin: 40px 0;
+    padding: 40px 15px;
+    box-sizing: border-box;
+    display: block;
+    }
+    #kelebihan h2{
+        font-size: 30px;
+    }
+    #kelebihan p{
+        font-size: 15px;
+    }
+    #contact {
+        width: 95%;           /* Menggunakan 95% dari lebar layar */
+        max-width: 600px;     /* Mencegah terlalu lebar di tablet kecil */
+        margin: 20px auto;    /* Menjaga elemen tetap di tengah */
+        padding: 20px 10px;   /* Mengurangi padding agar konten tidak tertekan */
+        box-sizing: border-box; /* WAJIB agar padding tidak membuat elemen melebihi 95% */
+        display: block;       /* Memastikan elemen mengikuti arus normal dokumen */
+        margin-bottom: 120px;
+    }
+    #contact h2 {
+        font-size: 25px;
+    }
+    #contact #deskripsi-kontak{
+        font-size: 15px;
+        color: #e2e8f0;
+        width: 80%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    #footer h4{
+        font-size:20px;
+    }
+    #footer #list-footer ul li a{
+        font-size: 15px;
+    }
+}

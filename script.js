@@ -4,7 +4,6 @@
 const lite_btn = document.getElementById("lite-btn");
 const smart_btn = document.getElementById("smart-btn");
 const multi_btn = document.getElementById("multi-btn");
-const pro_btn = document.getElementById("pro-btn");
 
 const home_btn = document.getElementById("home-btn");
 const service_btn = document.getElementById("service-btn");
@@ -93,46 +92,26 @@ function showLayanan(layanan_current) {
         semua_paket[6].innerHTML = "Fitur dinamis (seperti navigasi smooth, filter menu, atau toggle konten).";
         semua_paket[7].innerHTML = "Halaman website yang dinamis dan penyampaian informasi intraktif";
 
-    } else if (layanan_current === "multi") {
-        nama_paket.innerHTML = "Paket Multi-Page Web";
-        harga_paket.innerHTML = "Mulai dari 350K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(+50K - 70K IDR / ekstra halaman)</span>";
+        } else if (layanan_current === "multi") {
+    nama_paket.innerHTML = "Paket Multi-Page Web";
+    // Harga tetap, tidak pakai rentang agar lebih profesional
+    harga_paket.innerHTML = "Mulai dari 350K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Gratis 3 halaman pertama)</span>";
 
-        // Mengganti warna tombol
-        changeColor(multi_btn);
-        
-        // 4 Baris Pertama (Kenapa paket ini?)
-        semua_paket[0].innerHTML = "Solusi tepat untuk memaparkan informasi bisnis dan portofolio secara detail.";
-        semua_paket[1].innerHTML = "Sangat ideal untuk memamerkan beragam lini layanan dalam satu website.";
-        semua_paket[2].innerHTML = "Memudahkan audiens membaca info tanpa drama scrolling yang panjang.";
-        semua_paket[3].innerHTML = "Meningkatkan kredibilitas brand lewat struktur halaman yang rapi.";
-        
-        // 4 Baris Kedua (Apa yang akan anda dapatkan?)
-        semua_paket[4].innerHTML = "Anda akan mendapat 3 halaman website statis lite-Web.";
-        semua_paket[5].innerHTML = "Halaman tambahan hanya seharga 50K - 70K per ekstra halaman.";
-        semua_paket[6].innerHTML = "Navigasi antar-menu responsif untuk perpindahan halaman yang instan.";
-        semua_paket[7].innerHTML = "Pemisahan halaman yang optimal khusus profil, kontak, hingga produk Anda.";
+    // Mengganti warna tombol
+    changeColor(multi_btn);
+    
+    // 4 Baris Pertama (Kenapa paket ini?)
+    semua_paket[0].innerHTML = "Solusi tepat untuk memaparkan informasi bisnis dan portofolio secara mendalam.";
+    semua_paket[1].innerHTML = "Ideal untuk memisahkan lini layanan agar lebih terorganisir bagi pengunjung.";
+    semua_paket[2].innerHTML = "Navigasi lebih fokus dan terstruktur, menghindari scrolling yang melelahkan.";
+    semua_paket[3].innerHTML = "Meningkatkan kredibilitas brand dengan struktur informasi yang profesional.";
 
-    } else if (layanan_current === "pro") {
-        nama_paket.innerHTML = "Paket Pro Web";
-        harga_paket.innerHTML = "Mulai dari 700k IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(70k - 100k/ halaman tergantung kerumitannya)</span>";
-
-        // Mengganti warna tombol
-        changeColor(pro_btn);
-        
-        // 4 Baris Pertama (Kenapa paket ini?)
-        semua_paket[0].innerHTML = "Solusi total untuk kebutuhan fitur dan sistem bisnis yang kompleks.";
-        semua_paket[1].innerHTML = "Sistem web dirancang khusus mengikuti alur kerja unik bisnis Anda.";
-        semua_paket[2].innerHTML = "Skalabilitas tinggi, siap dikembangkan untuk jangka panjang.";
-        semua_paket[3].innerHTML = "Pengalaman pengguna terbaik bagi jasa yang besar dan kompleks.";
-        
-        // 4 Baris Kedua (Apa yang akan anda dapatkan?)
-        semua_paket[4].innerHTML = "Gabungan fitur dari paket multi yang detail dan smart yang indah.";
-        semua_paket[5].innerHTML = "Website dengan banyak halaman yang dinamis atau statis seusai keinginan.";
-        semua_paket[6].innerHTML = "Optimasi performa, kecepatan, dan transisi antar-halaman yang fluid.";
-        semua_paket[7].innerHTML = "Presentasi Produk yang Komprehensif untuk Menguatkan Nilai Bisnis Anda.";
-    }
+    semua_paket[4].innerHTML = "Anda akan mendapatkan tiga halaman utama sebagai dasar website bisnis Anda.";
+    semua_paket[5].innerHTML = "Anda bisa menambahkan halaman sebanyak yang dibutuhkan sesuai perkembangan bisnis.";
+    semua_paket[6].innerHTML = "Tersedia pilihan halaman Lite yang sangat ringan (70K/halaman) atau halaman Smart yang interaktif (120k/halaman).";
+    semua_paket[7].innerHTML = "Kami memberikan kebebasan bagi Anda untuk memilih teknologi tiap halaman tambahan sesuai kebutuhan dan anggaran.";    
 }
-
+}
 // ==========================================
 // 4. MENYAMBUNGKAN TOMBOL KE FUNGSI KLIK
 // ==========================================
@@ -148,13 +127,9 @@ multi_btn.addEventListener("click", function() {
     showLayanan("multi");
 });
 
-pro_btn.addEventListener("click", function() {
-    showLayanan("pro");
-});
 
 // Menjalankan paket lite secara default saat website pertama kali dimuat
 showLayanan("lite");
-
 
 
 

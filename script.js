@@ -47,7 +47,7 @@ function changeColor(tombol) {
 function showLayanan(layanan_current) {
     if (layanan_current === "lite") {
         nama_paket.innerHTML = "Paket Lite Web";
-        harga_paket.innerHTML = "Mulai dari 150K - 200K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya menyesuaikan dengan jumlah konten dan fitur)</span>";
+        harga_paket.innerHTML = "Mulai dari 170K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya menyesuaikan dengan jumlah konten dan fitur)</span>";
         changeColor(lite_btn);
 
         semua_paket[0].innerHTML = "Solusi paling hemat untuk brosur digital standar bagi bisnis yang baru merintis.";

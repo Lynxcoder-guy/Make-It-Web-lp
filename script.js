@@ -78,7 +78,7 @@ function showLayanan(layanan_current) {
 
     } else if (layanan_current === "multi") {
         nama_paket.innerHTML = "Paket Multi-Page Web";
-        harga_paket.innerHTML = "Mulai dari 500K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Gratis 3 halaman pertama)</span>";
+        harga_paket.innerHTML = "Mulai dari 700K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Gratis 3 halaman pertama)</span>";
         changeColor(multi_btn);
 
         semua_paket[0].innerHTML = "Solusi tepat untuk memaparkan informasi bisnis secara mendalam.";

@@ -47,7 +47,7 @@ function changeColor(tombol) {
 function showLayanan(layanan_current) {
     if (layanan_current === "lite") {
         nama_paket.innerHTML = "Paket Lite Web";
-        harga_paket.innerHTML = "Mulai dari 170K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya menyesuaikan dengan jumlah konten dan fitur)</span>";
+        harga_paket.innerHTML = "Mulai dari 170K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya bisa bertambah jika custom desain)</span>";
         changeColor(lite_btn);
 
         semua_paket[0].innerHTML = "Solusi paling hemat untuk brosur digital standar bagi bisnis yang baru merintis.";
@@ -57,24 +57,25 @@ function showLayanan(layanan_current) {
 
         // 4 Baris Kedua (Apa yang akan anda dapatkan?)
         semua_paket[4].innerHTML = "Profil bisnis lengkap yang memuat informasi layanan, keunggulan, serta detail kontak.";
-        semua_paket[5].innerHTML = "Tampilan website yang tertata rapi sehingga nyaman diakses dari ponsel maupun komputer.";
-        semua_paket[6].innerHTML = "Tombol WhatsApp atau email terintegrasi untuk memudahkan pelanggan menghubungi Anda secara instan.";
-        semua_paket[7].innerHTML = "Fleksibilitas pengembangan untuk menambah halaman atau fitur kapan saja seiring pertumbuhan bisnis Anda.";
+        semua_paket[5].innerHTML = "Tampilan website yang responsive sehingga nyaman diakses dari ponsel maupun komputer.";
+        semua_paket[6].innerHTML = "Keperluan website esensial seperti tombol hubungi whatsapp atau email dalam satu halaman statis";
+        semua_paket[7].innerHTML = "Website yang bisa disesuaikan dengan budget anda, bisa custom atau menggunakan template tergantung kebutuhan";
 
-    } else if (layanan_current === "smart") {
-        nama_paket.innerHTML = "Paket Smart Web";
-        harga_paket.innerHTML = "Mulai dari 350k IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya menyesuaikan dengan jumlah konten dan fitur)</span>";
-        changeColor(smart_btn);
-
-        semua_paket[0].innerHTML = "Website terasa hidup, modern, dan sangat interaktif.";
-        semua_paket[1].innerHTML = "Meningkatkan daya tarik produk utama lewat elemen dinamis.";
-        semua_paket[2].innerHTML = "Pengalaman pengguna (UX) yang lebih menarik.";
-        semua_paket[3].innerHTML = "Website terlihat lebih profesional seperti sistem kartu harga interaktif yang sedang Anda gunakan sekarang.";
-
-        semua_paket[4].innerHTML = "Semua fitur Paket Lite page dengan satu halaman praktis & ramah HP.";
-        semua_paket[5].innerHTML = "Sentuhan kodingan JavaScript murni untuk elemen interaktif di web.";
-        semua_paket[6].innerHTML = "Fitur dinamis (seperti navigasi smooth, search menu, atau toggle konten).";
-        semua_paket[7].innerHTML = "Halaman website yang dinamis dan penyampaian informasi intraktif";
+} else if (layanan_current === "smart") {
+    nama_paket.innerHTML = "Paket Smart Web";
+    harga_paket.innerHTML = "Mulai dari 350k IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya bisa bertambah jika custom desain)</span>";
+    changeColor(smart_btn);
+    semua_paket[0].innerHTML = "Website terasa hidup, modern, dan sangat interaktif.";
+    semua_paket[1].innerHTML = "Meningkatkan daya tarik produk utama lewat elemen dinamis dan interaktif.";
+    semua_paket[2].innerHTML = "Pengalaman pengguna (UX) yang lebih menarik dan profesional.";
+    semua_paket[3].innerHTML = "Website terlihat lebih interaktif seperti sistem kartu harga yang sedang Anda gunakan sekarang.";
+    
+    // Bagian Apa yang didapatkan:
+    semua_paket[4].innerHTML = "Semua fitur Paket Lite dengan satu halaman praktis & responsive di HP.";
+    semua_paket[5].innerHTML = "Sentuhan kodingan JavaScript murni untuk performa website yang super ringan.";
+    semua_paket[6].innerHTML = "Elemen interaktif modern seperti animasi scroll, jendela modal pop-up, hingga fitur dark mode."; // Mengisi baris yang menggantung
+    semua_paket[7].innerHTML = "Website yang bisa disesuaikan dengan budget Anda, bisa custom atau menggunakan template.";
+}
 
     } else if (layanan_current === "multi") {
         nama_paket.innerHTML = "Paket Multi-Page Web";

@@ -75,7 +75,6 @@ function showLayanan(layanan_current) {
     semua_paket[5].innerHTML = "Sentuhan kodingan JavaScript murni untuk performa website yang super ringan.";
     semua_paket[6].innerHTML = "Elemen interaktif modern seperti animasi scroll, jendela modal pop-up, hingga fitur dark mode."; // Mengisi baris yang menggantung
     semua_paket[7].innerHTML = "Website yang bisa disesuaikan dengan budget Anda, bisa custom atau menggunakan template.";
-}
 
     } else if (layanan_current === "multi") {
         nama_paket.innerHTML = "Paket Multi-Page Web";
@@ -93,7 +92,6 @@ function showLayanan(layanan_current) {
         semua_paket[7].innerHTML = "Kami memberikan kebebasan bagi Anda untuk memilih teknologi tiap halaman tambahan sesuai kebutuhan dan anggaran.";    
     }
 }
-
 // ==========================================
 // 4. MENYAMBUNGKAN TOMBOL KE FUNGSI KLIK
 // ==========================================

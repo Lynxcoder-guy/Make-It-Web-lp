@@ -13,6 +13,7 @@ const contact_btn = document.getElementById("contact-btn");
 // ==========================================
 // 2. DEKLARASI ELEMEN YANG AKAN DIUBAH
 // ==========================================
+const detail_paket = document.getElementById("detail-paket")
 const nama_paket = document.getElementById("nama-paket");
 const harga_paket = document.querySelector("#detail-paket h2"); 
 const semua_paket = document.querySelectorAll('[id="Deskripsi-paket"] ul li, [id="deskripsi-paket"] ul li');
@@ -47,49 +48,48 @@ function changeColor(tombol) {
 function showLayanan(layanan_current) {
     if (layanan_current === "lite") {
         nama_paket.innerHTML = "Paket Lite Web";
-        harga_paket.innerHTML = "Mulai dari 170K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya bisa bertambah jika custom desain)</span>";
+        harga_paket.innerHTML = "Mulai dari 170K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya belum termasuk domain)</span>";
         changeColor(lite_btn);
 
-        semua_paket[0].innerHTML = "Solusi paling hemat untuk brosur digital standar bagi bisnis yang baru merintis.";
-        semua_paket[1].innerHTML = "Menampilkan profil bisnis Anda secara statis (informasi tetap) namun tetap terlihat rapi dan terpercaya.";
-        semua_paket[2].innerHTML = "Sangat pas jika Anda hanya ingin memajang foto portofolio tanpa membutuhkan efek animasi yang kompleks.";
-        semua_paket[3].innerHTML = "Pilihan standar yang aman untuk sekadar menampilkan info dasar bisnis Anda";
+        semua_paket[0].innerHTML = "Informasi mengenai bisnis anda dalam satu alur website";
+        semua_paket[1].innerHTML = "Informasi krusial seperti kontak, email, atau informasi lainnya.";
+        semua_paket[2].innerHTML = "Fitur esensial seperti adaptasi layar pengguna (Laptop/hp) sehingga terlihat profesional";
+        semua_paket[3].innerHTML = "Dekorasi website simple seperti icons atau foto";
 
-        // 4 Baris Kedua (Apa yang akan anda dapatkan?)
-        semua_paket[4].innerHTML = "Profil bisnis lengkap yang memuat informasi layanan, keunggulan, serta detail kontak.";
-        semua_paket[5].innerHTML = "Tampilan website yang responsive sehingga nyaman diakses dari ponsel maupun komputer.";
-        semua_paket[6].innerHTML = "Keperluan website esensial seperti tombol hubungi whatsapp atau email dalam satu halaman statis";
-        semua_paket[7].innerHTML = "Website yang bisa disesuaikan dengan budget anda, bisa custom atau menggunakan template tergantung kebutuhan";
+        semua_paket[4].innerHTML = "Tambahan desain custom branding: <strong>+70K.</strong>";
+        semua_paket[5].innerHTML = "Jika panjang website lebih dari 3 poin utama: <strong>+25K/poin.</strong>";
+        semua_paket[6].innerHTML = "Revisi lebih dari satu kali: <strong>+15K/revisi tambahan.</strong>";
+        semua_paket[7].innerHTML = "Jika Anda membutuhkan update konten saat webiste sudah jadi: <strong>+25K/update.</strong>";
 
 } else if (layanan_current === "smart") {
     nama_paket.innerHTML = "Paket Smart Web";
-    harga_paket.innerHTML = "Mulai dari 350k IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya bisa bertambah jika custom desain)</span>";
+    harga_paket.innerHTML = "Mulai dari 350k IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya belum termasuk domain)</span>";
     changeColor(smart_btn);
-    semua_paket[0].innerHTML = "Website terasa hidup, modern, dan sangat interaktif.";
-    semua_paket[1].innerHTML = "Meningkatkan daya tarik produk utama lewat elemen dinamis dan interaktif.";
-    semua_paket[2].innerHTML = "Pengalaman pengguna (UX) yang lebih menarik dan profesional.";
-    semua_paket[3].innerHTML = "Website terlihat lebih interaktif seperti sistem kartu harga yang sedang Anda gunakan sekarang.";
+    semua_paket[0].innerHTML = "Infronmasi mengenai bisnis Anda dalam satu alur webisite interaktif (seperti tombol harga yang sedang anda gunakan)";
+    semua_paket[1].innerHTML = "Informasi mendalam seperti beberapa layanan/produk, pilihan variasi, dan semua informasi dari Paket Lite.";
+    semua_paket[2].innerHTML = "Fitur kompleks seperti sistem navigasi dinamis, layout presisi, dan penyampaian informasi yang efektif.";
+    semua_paket[3].innerHTML = "Dekorasi webisie simple seperti icons dan gambar.";
     
     // Bagian Apa yang didapatkan:
-    semua_paket[4].innerHTML = "Semua fitur Paket Lite dengan satu halaman praktis & responsive di HP.";
-    semua_paket[5].innerHTML = "Sentuhan kodingan JavaScript murni untuk performa website yang super ringan.";
-    semua_paket[6].innerHTML = "Elemen interaktif modern seperti animasi scroll, jendela modal pop-up, hingga fitur dark mode."; // Mengisi baris yang menggantung
-    semua_paket[7].innerHTML = "Website yang bisa disesuaikan dengan budget Anda, bisa custom atau menggunakan template.";
+    semua_paket[4].innerHTML = "Jika Anda membutuhkan menambahkan fitur dan desain custom: <strong>+120K.</strong>";
+    semua_paket[5].innerHTML = "Jika panjang website lebih dari 3 poin utama: <strong>+50K/poin.</strong>";
+    semua_paket[6].innerHTML = "Revisi lebih dari 2 kali: <strong>+20K/revisi tambahan</strong>"; // Mengisi baris yang menggantung
+    semua_paket[7].innerHTML = "Jika Anda membutuhkan update fitur atau konten: <strong>+50K-80K maks/update.</strong>";
 
     } else if (layanan_current === "multi") {
         nama_paket.innerHTML = "Paket Multi-Page Web";
-        harga_paket.innerHTML = "Mulai dari 700K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Gratis 3 halaman pertama)</span>";
+        harga_paket.innerHTML = "Mulai dari 700K IDR <br><span style='font-size: 14px; font-weight: normal; color: #ccc;'>(Biaya belum termasuk domain)</span>";
         changeColor(multi_btn);
 
-        semua_paket[0].innerHTML = "Solusi tepat untuk memaparkan informasi bisnis secara mendalam.";
-        semua_paket[1].innerHTML = "Me nyampaikan informasi soal bisnis Anda dengan lebih teroganisir.";
-        semua_paket[2].innerHTML = "Navigasi lebih fokus dan terstruktur dan tidak membosankan.";
-        semua_paket[3].innerHTML = "Meningkatkan kredibilitas brand dengan struktur informasi yang profesional.";
+        semua_paket[0].innerHTML = "Website dengan 3 halaman berbeda untuk penyampaian info bisnis mendalam.";
+        semua_paket[1].innerHTML = "Info detail seperti daftar layanan/produk, detail harga, dan semua informasi dari paket-paket sebelumnya.";
+        semua_paket[2].innerHTML = "Fitur bisa diatur sesuai kebutuhan bisa yang statis atau dinamis tergantung dana dan kebutuhan anda";
+        semua_paket[3].innerHTML = "Dekorasi website custom sudah termasuk tanpa biaya tambahan untuk tampilan personal bisni Anda dan revisi 5 kali";
 
-        semua_paket[4].innerHTML = "Anda akan mendapatkan tiga halaman utama sebagai dasar website bisnis Anda.";
-        semua_paket[5].innerHTML = "Anda bisa menambahkan halaman sebanyak yang dibutuhkan sesuai perkembangan bisnis.";
-        semua_paket[6].innerHTML = "Tersedia pilihan halaman Lite yang sangat ringan 70K/halaman atau halaman Smart yang interaktif 120k/halaman.";
-        semua_paket[7].innerHTML = "Kami memberikan kebebasan bagi Anda untuk memilih teknologi tiap halaman tambahan sesuai kebutuhan dan anggaran.";    
+        semua_paket[4].innerHTML = "Jika butuh panjang halaman lebih dari 3 poin/halaman: <strong>+100K/poin.</strong> ";
+        semua_paket[5].innerHTML = "Tambahan halaman website STATIS lebih dari 3 halaman: <strong>+100K/halaman.</strong>";
+        semua_paket[6].innerHTML = "Tambahan halaman website DINAMIS lebih dari 1 halaman: <strong>+200K/halaman";
+        semua_paket[7].innerHTML = "Jika Anda ingin update fitur atau halaman saat website sudah beroperasi: <strong>+50K/update</strong> ";    
     }
 }
 // ==========================================

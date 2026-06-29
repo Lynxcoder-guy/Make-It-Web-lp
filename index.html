@@ -1,133 +1,82 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Make It Web | Jasa Pembuatan Website Modern</title>
-    
-    <meta name="description" content="Jasa pembuatan website profesional di Depok untuk UMKM dan bisnis lokal. Hasil kerja rapi, loading sangat cepat, dan harga terjangkau. Mulai buat website bisnis impian Anda bersama Make It Web.">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="M logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumah_pint.art</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-<nav>
-    <h1>&lt;Make_It_<span>Web</span>&gt;</h1>
-    <ul id="nav-links">
-        <li><a href="#home">Beranda</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href="#kelebihan">Keunggulan</a></li>
-        <li><a href="#contact">Kontak</a></li>
-    </ul>
-   <ul id="mobile-links">
-    <li><a href="#home" id="home-btn"><img src="icons/house.svg" alt="wd"></a></li>
-    <li><a href="#layanan" id="service-btn"><img src="icons/briefcase-business.svg" alt=""></a></li>
-    <li><a href="#kelebihan" id="pros-btn"><img src="icons/astroid.svg" alt=""></a></li> 
-    <li><a href="#contact" id="contact-btn"><img src="icons/headset.svg" alt=""></a></li>
-   </ul> 
-</nav>
-<div class="background1">
+<!-- Navigation Bar -->
+<section id="nav-bar">
+  <nav id="sub-nav-bar">
+    <img src="icons/Logo.svg" alt="Logo" id="logo">
+    <div class="nav-links">
+      <a href="index.html">● Beranda</a>
+      <a href="info_daring.html">Layanan Daring</a>
+      <a href="#info_luring.html">Layanan Luring</a>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav-contacts">☰ Beranda</button>
+    <div class="nav-contacts" id="nav-contacts">
+      <a href="info_daring.html">Layanan Daring</a>
+      <a href="info_luring.html">Layanan Luring</a>
+    </div>
+  </nav>
+</section>
+
+<!-- Script untuk toggle burger -->
+<script>
+  const burger = document.getElementById('burger');
+  const navContacts = document.getElementById('nav-contacts');
+
+  burger.addEventListener('click', () => {
+    navContacts.classList.toggle('show');
+    const expanded = navContacts.classList.contains('show');
+    burger.setAttribute('aria-expanded', expanded);
+    burger.classList.toggle('active', expanded);
+  });
+</script>
+
+<!-- Home Section -->
 <section id="home">
-    <h2>Selamat datang di Make It Web</h2>
-    <p>&lt;Make_It_Web&gt; adalah layanan pembuatan website independen yang siap membantu Anda menghadirkan bisnis di jaringan internet.</p>
+  <div class="hero-text">
+  <header class="hero-title">
+    <h1>Rumah_pint.art</h1>
+    <h3>Pop Up Class & Community Hybrid Program</h3>
+  </header>
+  <p class="hero-description">
+    Membangun Ekosistem Tumbuh Kembang Inklusif Berbasis Hati Bagi Orang Tua & Anak.
+  </p>
+  </div>
+  <div class="hero-image">
+    <img src="">
 </section>
-<section id="layanan">
-    <h2>Layanan Kami</h2>
-    <p>Kami menawarkan berbagai jenis layanan pembuatan website sesuai kebutuhan dan budget bisnis Anda.</p>
-    <div id="detail-paket">
-    <h3 id="nama-paket">Paket Lite Page</h3>
-    <section id="informasi-layanan">
-        <div id="deskripsi-paket">
-            <h4>Anda akan mendapatkan</h4>
-            <ul style="width: 80%;">
-                <li>Informasi profil, jasa, dan kontak dalam satu alur praktis.</li>
-                <li>Website statis interaktif yang ramah bagi bisnis kecil.</li>
-                <li>Tombol WhatsApp atau email untuk respon pelanggan instan.</li>
-                <li>Optimasi kecepatan akses untuk pengalaman pelanggan yang maksimal.</li>
-            </ul>
-        </div>
-        <div id="deskripsi-paket">
-            <h4>Butuh tambahan?</h4>
-            <ul style="width: auto;">
-            <li>Jika Anda membutuhkan desain custom untuk branding<strong>+70K</strong></li>
-            <li>Jika Websitenya lebih panjang dari 3 scroll <strong>+25K/scroll</strong></li>
-            <li>Jika revisi lebih dari satu kali<strong> +15K/revisi tambahan</strong></li>
-            <li>Jika Anda butuh buat update konten rutin <strong>+25K/Update</strong></li>
-            </ul>
-        </div>
-    </section>
-    <div id="harga-bro">
-    <h2>Harga mulai dari 150K - 200K IDR</h2>
-    </div>
-    </div>
-        <div id="layanan-kami">
-        <button id="lite-btn">Lite</button>
-        <button id="smart-btn">Smart</button>
-        <button id="multi-btn">Pro</button>
-    </div>
+
+<!--Layanan kami (Daring dan Luring)--->
+<section id="layanan-kami">
+  <div class="layanan-daring">
+    <h3>Layanan Daring</h3>
+    <p>Ini adalah layanan edukasi online yang kami sediakan</p>
+      <button><a href="info_daring.html">Selengkapnya</a></button>
+  </div>
+  <div class="layanan-luring">
+    <h3>Layanan Luring</h3>
+    <p>Ini adalah layanan edukasi luring yang kami sediakan</p>
+      <button><a href="">Selengkapnya</a></button>
+  </div>
+
+<!--Panel admin-->
+</section id="kontak-admin">
+  <h3>Kontak Kami</h3>
+  <p>Jika masih ada informasi yang belum jelas soal kami jangan ragu untuk bertanya</p>
+  <div class="tombol-kontak">
+    <button><a href="">Whatsapp</a></button>
+    <button><a href="">Email</a></button>
+    <button><a href="">*social media lain</a></button>
+  </div>
+<section>
+  <div></div>
 </section>
-</div>
-<section id="kelebihan">
-    <h2>Kenapa harus Make It Web?</h2>
-    <p>Kami memiliki kelebihan yang membuat kami berbeda dari penyedia jasa pembuatan website lainnya.</p>
-    <div id="kelebihan-kami">
-    <ul>
-        <li>
-            <img src="icons/dollar-sign.svg" alt="gmbr">
-            <strong>Harga Paling Kompetitif</strong> Penawaran harga yang jujur, sangat terjangkau, dan ramah untuk dana untuk bisnis anda.
-        </li>
-        <li>
-            <img src="icons/handshake.svg" alt="gmbr">
-            <strong>Bayar aman & terpercaya</strong> Pelunasan penuh hanya dilakukan saat website Anda sudah siap rilis untuk menjamin rasa aman Anda.
-        </li>
-        <li>
-            <img src="icons/circle-gauge.svg" alt="gmbr">
-            <strong>Website sangat ringan</strong> Dengan kodingan murni tanpa beban sistem tambahan, kami menjamin website Anda tampil sangat cepat, stabil, dan responsif di setiap perangkat.
-        </li>
-        <li>
-            <img src="icons/infinity.svg" alt="gmbr">
-            <strong>Tanpa biaya perawatan atau update</strong> Website akan tahan selamanya tanpa biaya tambahan jika tidak perlu update.
-        </li>
-        <li>
-            <img src="icons/monitor-smartphone.svg" alt="gmbr">
-            <strong>Website responsif</strong> di semua perangkat yang digunakan oleh pelanggan memberi pengalaman terbaik.
-        </li>
-    </ul>
-    </div>
-</section>
-<section id="contact">
-    <h2>Hadirkan Bisnis anda di Internet sekarang!!</h2>
-    <div id="hubungi-kami">
-    <p id="deskripsi-kontak">
-    Hadirkan bisnis Anda di internet sekarang and nikmati manfaatnya <strong>seumur hidup</strong>, tanpa perlu pusing memikirkan biaya langganan bulanan ataupun biaya perawatan sistem.
-    </p>
-    <p id="disclaimer"> Hanya tersedia<strong> 2 antrean setiap minggu </strong>jadi segera amankan posisi Anda sekarang!</p>
-    </div>
-        <a href="https://wa.me/6289631391601" target="_blank"><button>Amankan Pesanan Saya</button></a>
-</section>
-<section id="footer">
-    <h4>More detail and information</h4>
-    <div id="list-footer">
-    <ul>
-        <li>
-            <a href="https://wa.me/6289631391601" target="_blank">WhatsApp kami</a>
-        </li>
-        <li>
-            <a href="mailto:shalbia549@gmail.com" target="_blank">Email Kami</a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="detail.html">Informasi detail/FAQ</a>
-        </li>
-        <li>
-            <a href="payment.html">Detail pembayaran</a>
-        </li>
-    </ul>
-    </div>
-</section>
-<script src="script.js"></script>
 </body>
 </html>
